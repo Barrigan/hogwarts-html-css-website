@@ -29,6 +29,7 @@ nav {
 */
 
 nav ul {
+    margin-top: 15px;
     height: 25px;
     /*
     background-color: brown;
@@ -49,13 +50,18 @@ nav ul li {
 }
 
 nav ul li a {
+    transition-duration: .5s;
     color: white;
     text-decoration: none;
     /*
     background-color: green;
     */
 }
-
+nav ul li a:hover {
+    transition-duration: .5s;
+    color: black;
+    text-shadow: 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white;
+}
 h2 {
     text-align: center;
 }
@@ -80,7 +86,6 @@ article {
     background-color: pink;
     */
     width: 40%;
-    position: relative;
     padding: 5px;
 }
 
@@ -89,7 +94,6 @@ article {
     background-color: pink;
     */
     width: 40%;
-    position: relative;
     padding: 5px;
 }
 
@@ -103,4 +107,33 @@ article div img{
 
 #section-2 p {
     padding-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    /*
+    body {
+        background-color: lightgreen;
+    }
+    */
+    
+    .left-container {
+        width: 80%;
+    }
+
+    .right-container {
+        width: 80%;
+    }
+
+    article {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        height: 125px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
 }
